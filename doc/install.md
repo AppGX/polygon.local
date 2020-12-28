@@ -8,5 +8,5 @@ config\app.php providers -> Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::
 
 
 ## laravel-debugbar install
-composer require barryvdh/laravel-debugbar --dev "3.2.*" for -> laravel 5.7.*
+``` composer require barryvdh/laravel-debugbar --dev "3.2.*"``` for -> laravel 5.7.*
 php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
