@@ -17,3 +17,8 @@ Route::get('/', function () {
 
 Route::resource('rest', 'RestTestController');
 //    ->names('restTest');
+
+Route::group(['namespace'=> 'blog', 'prefix'=>'blog' ], function () {
+    Route::resource('posts', 'PostController')->names('blog.posts');
+});
+
