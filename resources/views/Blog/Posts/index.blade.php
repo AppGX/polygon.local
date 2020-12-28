@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <table>
     <thead>
     <tr>
@@ -17,3 +20,4 @@
     @endforeach
     </tbody>
 </table>
+@endsection

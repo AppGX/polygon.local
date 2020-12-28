@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Blog;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Controller as GuestBaseController;
 
-abstract class BaseController extends Controller
+abstract class BaseController extends GuestBaseController
 {
 
 }

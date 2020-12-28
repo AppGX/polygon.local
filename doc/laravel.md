@@ -15,3 +15,29 @@ php artisan make:controller Blog/BaseController --resource
 ````
 php artisan make:controller Blog/PostController --resource
 ````
+#### Аунтификация
+Создание базовых файлов аунтитификации
+````
+php artisan make:auth
+````
+Запуск миграции
+````
+php artisan migrate
+````
+Тест...
+````
+https://polygon.local/register
+````
+## Контролер категорий
+#### Создание маршута
+web.php
+````
+Route::resource('categories', 'CategoryController')
+    ->only($methods)
+    ->names('blog.admin.categories);
+````
+создание контролера
+```
+php artisan make:controller Blog/Admin/CategoryController --resource
+```
+
