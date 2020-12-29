@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Blog\Admin;
 
 use App\Http\Controllers\Blog\Admin\BaseController as AdminBaseControler;
+use App\Models\BlogCategory;
 use Illuminate\Http\Request;
 
 
@@ -15,8 +16,10 @@ class CategoryController extends AdminBaseControler
      */
     public function index()
     {
-        //
-        dd(__METHOD__);
+//        $items = BlogCategory::all();
+        $paginator = BlogCategory::paginate(5);
+//        dd($items, $pagination);
+        return view('blog.admin.category.index', compact('paginator'));
     }
 
     /**
