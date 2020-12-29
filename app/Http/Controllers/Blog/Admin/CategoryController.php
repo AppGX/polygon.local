@@ -29,7 +29,7 @@ class CategoryController extends AdminBaseControler
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -52,6 +52,14 @@ class CategoryController extends AdminBaseControler
     public function edit($id)
     {
         //
+        $item = [];
+        $item[] = BlogCategory::findOrFail($id);
+        $item[] = BlogCategory::find($id);
+        $item[] = BlogCategory::where('id', '=', $id)->first();
+        dd(collect($item)->pluck('id'));
+        $categoryList = BlogCategory::all();
+        //
+        return view('blog.admin.category.edit', compact('item', 'categoryList'));
     }
 
     /**
